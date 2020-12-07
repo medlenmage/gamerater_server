@@ -1,7 +1,7 @@
 from django.db import models
 from django.db.models.deletion import CASCADE
 
-class Review(model.models):
+class Review(models.Model):
     player = models.ForeignKey( "Player",
         on_delete=CASCADE,
         related_name="players",

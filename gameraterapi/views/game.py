@@ -5,7 +5,8 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from levelupapi.models import Game, Gamer
+from gameraterapi.models import Game, Player, Category
+from gameraterapi.serializers.gameSerializer import GameSerializer
 
 
 class Games(ViewSet):
@@ -18,14 +19,13 @@ class Games(ViewSet):
         """
 
         # Uses the token passed in the `Authorization` header
-        gamer = Gamer.objects.get(user=request.auth.user)
+        player = Player.objects.get(user=request.auth.user)
 
         # Create a new Python instance of the Game class
         # and set its properties from what was sent in the
         # body of the request from the client.
         game = Game()
         game.title = request.data["title"]
-        game.description = request.data["description"]
         game.designer = request.data["designer"]
         game.year_released = request.data["yearReleased"]
         game.number_of_players = request.data["numberOfPlayers"]
@@ -76,14 +76,13 @@ class Games(ViewSet):
         Returns:
             Response -- Empty body with 204 status code
         """
-        gamer = Gamer.objects.get(user=request.auth.user)
+        player = Player.objects.get(user=request.auth.user)
 
         # Do mostly the same thing as POST, but instead of
         # creating a new instance of Game, get the game record
         # from the database whose primary key is `pk`
         game = Game.objects.get(pk=pk)
         game.title = request.data["title"]
-        game.description = request.data["description"]
         game.designer = request.data["designer"]
         game.year_released = request.data["yearReleased"]
         game.number_of_players = request.data["numberOfPlayers"]
@@ -130,9 +129,6 @@ class Games(ViewSet):
         #    http://localhost:8000/games?type=1
         #
         # That URL will retrieve all tabletop games
-        game_type = self.request.query_params.get('type', None)
-        if game_type is not None:
-            games = games.filter(gametype__id=game_type)
 
         serializer = GameSerializer(
             games, many=True, context={'request': request})

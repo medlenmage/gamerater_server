@@ -1,0 +1,42 @@
+  
+[
+    {
+        "model": "gameraterapi.game",
+        "pk": 1,
+        "fields": {
+            "title": "Baldur's Gate 3",
+            "designer": "Benoit Turpin",
+            "year_released": "2020",
+            "number_of_players": 2,
+            "estimated_time_play": "10hrs",
+            "age_recommendation": "18yrs",
+            "categories": [8, 6]
+        }
+    },
+    {
+        "model": "levelupapi.game",
+        "pk": 2,
+        "fields": {
+            "title": "Monoply",
+            "designer": "Col. Sanders",
+            "year_released": "1960",
+            "number_of_players": 4,
+            "estimated_time_play": "10hrs",
+            "age_recommendation": "6+ yrs",
+            "categories": [2]
+        }
+    },
+    {
+        "model": "levelupapi.game",
+        "pk": 3,
+        "fields": {
+            "title": "Madden 21",
+            "designer": "Electronic Arts",
+            "year_released": "2020",
+            "number_of_players": 2,
+            "estimated_time_play": "10hrs",
+            "age_recommendation": "14+ yrs",
+            "categories": [7]
+        }
+    }
+  ]

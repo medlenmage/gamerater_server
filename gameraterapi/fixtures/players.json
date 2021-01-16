@@ -1,10 +1,10 @@
 [
-    {
-        "model": "levelupapi.gamer",
-        "pk": 1,
-        "fields": {
-            "user": 1,
-            "bio": "Me"
-        }
-    }
-  ]
+  {
+      "model": "gameraterapi.player",
+      "pk": 1,
+      "fields": {
+          "user": 1,
+          "bio": "Me"
+      }
+  }
+]

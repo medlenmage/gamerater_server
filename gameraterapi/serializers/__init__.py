@@ -1,2 +1,2 @@
-from .games import GameSerializer
+from .gameSerializer import GameSerializer
 from .categorySerializer import CategorySerializer

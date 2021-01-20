@@ -10,11 +10,11 @@
             "number_of_players": 2,
             "estimated_time_play": "10hrs",
             "age_recommendation": "18yrs",
-            "categories": [8, 6]
+            "category": 8
         }
     },
     {
-        "model": "levelupapi.game",
+        "model": "gameraterapi.game",
         "pk": 2,
         "fields": {
             "title": "Monoply",
@@ -23,11 +23,11 @@
             "number_of_players": 4,
             "estimated_time_play": "10hrs",
             "age_recommendation": "6+ yrs",
-            "categories": [2]
+            "category": 2
         }
     },
     {
-        "model": "levelupapi.game",
+        "model": "gameraterapi.game",
         "pk": 3,
         "fields": {
             "title": "Madden 21",
@@ -36,7 +36,7 @@
             "number_of_players": 2,
             "estimated_time_play": "10hrs",
             "age_recommendation": "14+ yrs",
-            "categories": [7]
+            "category": 7
         }
     }
   ]

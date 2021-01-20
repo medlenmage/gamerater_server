@@ -13,4 +13,4 @@ class CategorySerializer(serializers.HyperlinkedModelSerializer):
             view_name='category',
             lookup_field='id'
         )
-        fields = ('id', 'label')
+        fields = ('id', 'name')

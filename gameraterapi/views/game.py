@@ -9,7 +9,7 @@ from gameraterapi.models import Game, Player, Category
 from gameraterapi.serializers.gameSerializer import GameSerializer
 
 
-class Games(ViewSet):
+class GameViewSet(ViewSet):
     """Level up games"""
 
     def create(self, request):

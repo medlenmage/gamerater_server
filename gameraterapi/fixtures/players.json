@@ -1,6 +1,6 @@
 [
   {
-      "model": "levelupapi.gamer",
+      "model": "gameraterapi.player",
       "pk": 1,
       "fields": {
           "user": 1,

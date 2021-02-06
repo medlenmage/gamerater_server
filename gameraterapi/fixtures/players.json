@@ -3,8 +3,21 @@
       "model": "gameraterapi.player",
       "pk": 1,
       "fields": {
-          "user": 1,
-          "bio": "Me"
+          "user": 1
+      }
+  },
+  {
+      "model": "gameraterapi.player",
+      "pk": 2,
+      "fields": {
+          "user": 2
+      }
+  },
+  {
+      "model": "gameraterapi.player",
+      "pk": 3,
+      "fields": {
+          "user": 3
       }
   }
 ]

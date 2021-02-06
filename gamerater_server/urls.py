@@ -1,21 +1,23 @@
 from django.conf.urls import include
-from django.urls import path
-from django.contrib import admin
-from rest_framework import routers
-from gameraterapi.views import register_user, login_user
 from django.conf.urls.static import static
+from django.urls import path
 from django.conf import settings
-
-from gameraterapi.views import GameViewSet, CategoryViewSet
+from gameraterapi.views import GamesViewSet, CategoriesViewSet, GameReviewViewSet, register_user, login_user, GameRatingViewSet, PlayerViewSet, GamePictureViewSet
+from rest_framework import routers
 
 router = routers.DefaultRouter(trailing_slash=False)
-router.register(r'games', GameViewSet, 'game')
-router.register(r'categories', CategoryViewSet, 'category')
+router.register(r'games', GamesViewSet, 'game')
+router.register(r'categories', CategoriesViewSet, 'category')
+router.register(r'reviews', GameReviewViewSet, 'review')
+router.register(r'ratings', GameRatingViewSet, 'rating')
+router.register(r'players', PlayerViewSet, 'player')
+router.register(r'pictures', GamePictureViewSet, 'picture')
 
 
 urlpatterns = [
+    path('', include(router.urls)),
     path('register', register_user),
     path('login', login_user),
     path('api-auth', include('rest_framework.urls', namespace='rest_framework')),
-    path('', include(router.urls))
-]
+    path('', include('gamerater_reports.urls'))
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,42 +1,41 @@
-  
 [
     {
         "model": "gameraterapi.game",
         "pk": 1,
         "fields": {
-            "title": "Baldur's Gate 3",
-            "designer": "Benoit Turpin",
-            "year_released": "2020",
-            "number_of_players": 2,
-            "estimated_time_play": "10hrs",
-            "age_recommendation": "18yrs",
-            "category": 8
+            "title": "Baulder's Gate 3",
+            "designer": "Cards Galore!",
+            "description": "classic Dungeons and Dragons style video game",
+            "year_released": 2020,
+            "num_players": 4,
+            "game_image": "",
+            "category": 6
         }
     },
     {
         "model": "gameraterapi.game",
         "pk": 2,
         "fields": {
-            "title": "Monoply",
-            "designer": "Col. Sanders",
-            "year_released": "1960",
-            "number_of_players": 4,
-            "estimated_time_play": "10hrs",
-            "age_recommendation": "6+ yrs",
-            "category": 2
+            "title": "Resident Evil 8: Village",
+            "designer": "Konami",
+            "description": "A first person horror shooter.",
+            "year_released":2021,
+            "num_players": 1,
+            "game_image": "",
+            "category": 8
         }
     },
     {
         "model": "gameraterapi.game",
         "pk": 3,
         "fields": {
-            "title": "Madden 21",
-            "designer": "Electronic Arts",
-            "year_released": "2020",
-            "number_of_players": 2,
-            "estimated_time_play": "10hrs",
-            "age_recommendation": "14+ yrs",
-            "category": 7
+            "title": "Splinter Cell",
+            "designer": "Ubisoft",
+            "description": "A stealth shooter with stealth elements",
+            "year_released": 2004,
+            "num_players": 1,
+            "game_image": "",
+            "category": 3
         }
     }
-  ]
+]
